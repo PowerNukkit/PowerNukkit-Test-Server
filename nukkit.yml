@@ -1,0 +1,94 @@
+# Advanced configuration file for Nukkit
+# Some of these settings are safe, others can break your server if modified incorrectly
+# New settings/defaults won't appear automatically on this file when upgrading
+
+settings:
+ # Multi-language setting
+ # Available: %1
+ language: eng
+ # Whether to send all strings translated to server locale or let the device handle them
+ force-language: false
+ shutdown-message: "Server closed"
+ # Allow listing plugins via Query
+ query-plugins: true
+ # Show a console message when a plugin uses deprecated API methods
+ deprecated-verbose: true
+ # Number of AsyncTask workers
+ # If set to auto, it'll try to detect the number of cores (and at least 4)
+ async-workers: auto
+ safe-spawn: true
+
+network:
+ batch-threshold: 256
+ compression-level: 7
+ async-compression: false
+
+debug:
+ level: 1
+ commands: false
+
+timings:
+ enabled: false
+ verbose: false
+ history-interval: 6000
+ history-length: 72000
+ bypass-max: false
+ privacy: false
+ ignore: []
+
+level-settings:
+ default-format: anvil
+ auto-tick-rate: true
+ auto-tick-rate-limit: 20
+ base-tick-rate: 1
+ always-tick-players: false
+ tick-redstone: true
+
+chunk-sending:
+ per-tick: 4
+ max-chunks: 192
+ spawn-threshold: 56
+ cache-chunks: false
+
+chunk-ticking:
+ per-tick: 40
+ tick-radius: 3
+ light-updates: false
+ clear-tick-list: false
+
+chunk-generation:
+ queue-size: 8
+ population-queue-size: 8
+
+# Max tick rate for these entities
+ticks-per:
+ animal-spawns: 400
+ monster-spawns: 1
+ autosave: 6000
+ cache-cleanup: 900
+
+# Max amount of these entities
+spawn-limits:
+ monsters: 70
+ animals: 15
+ water-animals: 5
+ ambient: 15
+
+player:
+ save-player-data: true
+ skin-change-cooldown: 30
+ force-skin-trusted: false
+ check-movement: true
+
+aliases:
+ # Aliases for commands
+ # Examples:
+ # showtheversion: version
+ # savestop: [save-all, stop]
+
+worlds:
+ # These settings will override the generator set in server.properties and allows loading multiple levels
+ # Examples:
+ #world:
+ # seed: 404
+ # generator: FLAT:2;7,59x1,3x3,2;1;decoration(treecount=80 grasscount=45)
